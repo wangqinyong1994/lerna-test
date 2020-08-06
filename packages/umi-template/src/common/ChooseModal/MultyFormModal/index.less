@@ -1,0 +1,61 @@
+.multy-modal-wrap {
+  .title {
+    font-size: 28px;
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-content {
+      font-size: 32px;
+    }
+    &-right {
+      color: #4a7efe;
+    }
+  }
+  .content-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    font-size: 36px;
+    font-weight: 400;
+    color: #303133;
+    line-height: 36px;
+    margin-top: 36px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &.active {
+      color: #4a7efe;
+    }
+
+    img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  :global(.am-modal-header) {
+    padding: 12px 30px;
+  }
+  :global(.am-modal-body) {
+    max-height: 600px;
+    overflow: auto;
+  }
+}
+
+.text-dom {
+  display: block !important;
+  max-width: 590px;
+  height: 88px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 88px;
+  position: relative;
+  display: flex;
+  flex: 1 1;
+  align-self: stretch;
+  padding-right: 30px;
+  overflow: hidden;
+}

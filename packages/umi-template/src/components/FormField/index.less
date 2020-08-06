@@ -1,0 +1,73 @@
+.formField {
+  background: #fff;
+  min-height: 148px;
+  overflow: hidden;
+
+  .control {
+    width: 718px;
+    height: 100%;
+    float: right;
+    overflow: hidden;
+    position: relative;
+    padding: 34px 32px 32px 0;
+    border-bottom: 1px solid #e6e7eb;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 28px;
+      color: #909399;
+
+      .label {
+        color: #909399;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .labelRequired {
+      color: #909399;
+
+      &::after {
+        content: '*';
+        color: #f22323;
+        margin-left: 4px;
+      }
+    }
+
+    .content {
+      font-size: 36px;
+      font-weight: 400;
+      color: #303133;
+      line-height: 36px;
+
+      &.grew {
+        color: #909399;
+      }
+    }
+
+    .error {
+      font-size: 24px;
+      color: #f22323;
+    }
+  }
+
+  .text-dom {
+    max-width: 600px;
+    height: 88px;
+    line-height: 88px;
+    position: relative;
+    padding-right: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  :global(.am-input-control input::-webkit-input-placeholder) {
+    color: #909399;
+  }
+}

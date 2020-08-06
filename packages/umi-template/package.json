@@ -1,0 +1,82 @@
+{
+  "private": true,
+  "name": "template-umi",
+  "version": "1.0.0",
+  "config": {
+    "tq_alpha": "alpha",
+    "tq_beta": "beta",
+    "tq_zwwx_test": "zwwx_test",
+    "tq_zwwx_prod": "zwwx_prod"
+  },
+  "scripts": {
+    "start": "umi dev",
+    "build:alpha": "cross-env TQ_ENV=$npm_package_config_tq_alpha umi build",
+    "build:beta": "cross-env TQ_ENV=$npm_package_config_tq_beta umi build",
+    "build:zwwx_test": "cross-env TQ_ENV=$npm_package_config_tq_zwwx_test umi build",
+    "build:zwwx_prod": "cross-env TQ_ENV=$npm_package_config_tq_zwwx_prod umi build",
+    "build": "umi build",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
+    "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
+    "analyze": "cross-env ANALYZE=1 umi build",
+    "prettier": "prettier -c --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged",
+      "commit-msg": "commitlint -e .git/COMMIT_EDITMSG --verbose"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts,less,md,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{js,jsx}": "npm run lint-staged:js",
+    "**/*.{js,ts,tsx}": "npm run lint-staged:js"
+  },
+  "dependencies": {
+    "@alitajs/hd": "^2.3.6",
+    "@types/react-transition-group": "^4.2.4",
+    "@umijs/preset-react": "^1.4.8",
+    "@umijs/test": "^3.0.14",
+    "antd-mobile": "^2.3.1",
+    "blueimp-md5": "^2.16.0",
+    "classnames": "^2.2.6",
+    "localforage": "^1.7.3",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "nprogress": "^0.2.0",
+    "query-string": "^6.13.1",
+    "rc-form": "^2.4.11",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-draggable": "^4.4.2",
+    "react-helmet": "^6.0.0",
+    "react-sticky": "^6.0.3",
+    "react-transition-group": "^4.4.1",
+    "redux": "^4.0.5",
+    "umi": "^3.0.14",
+    "umi-request": "^1.2.19",
+    "yorkie": "^2.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@umijs/fabric": "^1.2.4",
+    "antd-mobile-demo-data": "^0.3.0",
+    "commitlint-config-gitmoji": "^1.0.1",
+    "cross-env": "^7.0.2",
+    "eslint": "5.16.0",
+    "husky": "^4.2.3",
+    "lint-staged": "10.1.2",
+    "mockjs": "^1.1.0",
+    "prettier": "2.0.4",
+    "stylelint": "^13.3.0",
+    "typescript": "^3.8.3",
+    "vconsole": "^3.3.4"
+  }
+}

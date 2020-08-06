@@ -1,0 +1,39 @@
+@import '../global.less';
+.basicLayout {
+  display: flex;
+  flex-direction: column;
+  :global(.am-navbar) {
+    height: 88px;
+    background-color: #4a7efe;
+    position: relative;
+    z-index: 4;
+  }
+
+  .container {
+    background-color: #f2f3f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100vw;
+    height: calc(100vh - 88px);
+  }
+
+  :global(.screen-trans-enter) {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  :global(.screen-trans-enter-active) {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 0.3s;
+  }
+  :global(.screen-trans-exit) {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  :global(.screen-trans-exit-active) {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 0.3s;
+  }
+}
