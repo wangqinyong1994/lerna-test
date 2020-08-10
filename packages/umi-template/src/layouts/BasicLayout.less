@@ -2,6 +2,8 @@
 .basicLayout {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+
   :global(.am-navbar) {
     height: 88px;
     background-color: #4a7efe;
@@ -15,7 +17,11 @@
     flex-direction: column;
     justify-content: start;
     width: 100vw;
-    height: calc(100vh - 88px);
+    flex: 1;
+
+    div:first-child {
+      height: 100%;
+    }
   }
 
   :global(.screen-trans-enter) {

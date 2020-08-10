@@ -2,6 +2,8 @@ const { TQ_ENV } = process.env;
 const isZwwxTest = TQ_ENV && TQ_ENV === 'zwwx_test';
 const isZwwxProd = TQ_ENV && TQ_ENV === 'zwwx_prod';
 
+// 部署政务微信应用，找到对应政务微信后台应用里的appSecret、apiSecret
+
 // 政务微信-测试环境
 const zwwxModulePopulationTest = {
   appSecret: 'c4c00b341271472b947cebd3b59d4ab7',

@@ -24,6 +24,7 @@ let init = async (templateName, projectName) => {
             //通过配置文件，获取模板信息
             let loading = ora('downloading template ...');
             loading.start();
+            console.log(123, templateName, projectName);
             downloadLocal(templateName, projectName).then(() => {
                 loading.succeed();
                 const fileName = `${projectName}/package.json`;

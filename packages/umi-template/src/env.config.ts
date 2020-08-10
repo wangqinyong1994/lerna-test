@@ -1,4 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
+import VConsole from 'vconsole';
+
 const { TQ_ENV, NODE_ENV } = process.env;
+
+if (TQ_ENV === 'zwwx_test' && NODE_ENV === 'production') {
+  new VConsole();
+}
 export interface IEnvConfig {
   baseURL?: string; // 接口域名
   ossConfig?: {

@@ -1,6 +1,8 @@
 {
   "packages": [
-    "packages/*"
+    "packages/t-ui",
+    "packages/t-cli",
+    "packages/umi-template"
   ],
   "version": "0.0.0"
 }
