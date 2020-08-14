@@ -16,47 +16,21 @@ export default defineConfig({
   plugins: ['@alitajs/hd'],
   proxy: {
     // '/gridcloud-authcenter': {
-    //   target: 'http://192.168.10.104:25001/',
+    //   target: 'http://192.168.100.242:5080/',
     //   changeOrigin: true,
     // },
     // '/gridcloud-gridcenter': {
-    //   target: 'http://192.168.10.104:25001/',
+    //   target: 'http://192.168.100.242:5080/',
     //   changeOrigin: true,
-    //   pathRewrite: {
-    //     '^/gridcloud-gridcenter': '',
-    //   },
     // },
     // '/gridcloud-addresscenter': {
-    //   target: 'http://192.168.10.104:25001/',
+    //   target: 'http://192.168.100.242:5080/',
     //   changeOrigin: true,
     // },
     // '/gridcloud-usercenter': {
-    //   target: 'http://192.168.10.104:25001/',
+    //   target: 'http://192.168.100.242:5080/',
     //   changeOrigin: true,
     // },
-    '/gridcloud-authcenter': {
-      target: 'http://192.168.100.242:5080/',
-      changeOrigin: true,
-    },
-    // '/gridcloud-gridcenter': {
-    //   target: 'http://192.168.10.104:25000/',
-    //   changeOrigin: true,
-    //   pathRewrite: {
-    //     '^/gridcloud-gridcenter': '',
-    //   },
-    // },
-    '/gridcloud-gridcenter': {
-      target: 'http://192.168.100.242:5080/',
-      changeOrigin: true,
-    },
-    '/gridcloud-addresscenter': {
-      target: 'http://192.168.100.242:5080/',
-      changeOrigin: true,
-    },
-    '/gridcloud-usercenter': {
-      target: 'http://192.168.100.242:5080/',
-      changeOrigin: true,
-    },
   },
   runtimePublicPath: true,
   history: {

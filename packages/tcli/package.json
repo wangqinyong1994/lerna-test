@@ -1,0 +1,28 @@
+{
+  "name": "taro_scaffold",
+  "version": "1.0.0",
+  "description": "taro_scaffold",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangqinyong1994/taro_scaffold.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangqinyong1994/taro_scaffold/issues"
+  },
+  "homepage": "https://github.com/wangqinyong1994/taro_scaffold#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.20.0"
+  },
+  "bin": {
+    "my-cli": "bin/cli"
+  }
+}

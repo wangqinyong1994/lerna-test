@@ -5,8 +5,6 @@
   "bin": {
     "tt": "bin/tt",
     "tt-init": "bin/tt-init",
-    "tt-build": "bin/tt-build",
-    "tt-create": "bin/tt-create",
     "tt-list": "bin/tt-list"
   },
   "repository": {
@@ -48,5 +46,10 @@
   "license": "ISC",
   "engines": {
     "node": ">=8.9"
-  }
+  },
+  "templates": [{
+    "name": "umi-template",
+    "url": "repo + https://github.com/wangqinyong1994/lerna-test/tree/master/packages/umi-template",
+    "description": "umi政务微信模板"
+  }]
 }
