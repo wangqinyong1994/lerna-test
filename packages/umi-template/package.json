@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "template-umi",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "config": {
     "tq_alpha": "alpha",
     "tq_beta": "beta",

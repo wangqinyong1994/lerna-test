@@ -1,6 +1,6 @@
 {
   "name": "t-ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,8 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "antd-mobile": "^2.3.3",
+    "classnames": "^2.2.6",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "classnames": "^2.2.6"
+    "react-dom": "^16.12.0"
   }
 }
